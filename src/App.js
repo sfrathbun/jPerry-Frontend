@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Website for Justin Perry
+          Website for Justin Perry at MorningStar
         </a>
       </header>
     </div>
