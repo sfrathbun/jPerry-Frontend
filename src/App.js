@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Fragment } from 'react';
+// import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import Navigation from './components/layouts/Navigation';
+import Home from './components/views/Home';
+import About from './components/views/About';
+import Blog from './components/views/Blog';
+import Podcasts from './components/views/Podcasts';
+import LiveStream from './components/views/LiveStream';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Website for Justin Perry at MorningStar
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Fragment>
+        <Navigation />
+          <Route exact path='/' component={Home} />
+          <Route exact path='/about' component={About} />
+          <Route exact path='/podcasts' component={Podcasts} />
+          <Route exact path='/watchLive' component={LiveStream} />
+          <Route exact path='/blog' component={Blog} />
+      </Fragment>
+    </Router>
   );
 }
 
