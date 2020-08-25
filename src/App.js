@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import './tailwind.output.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Navigation from './components/layouts/Navigation';
@@ -9,6 +10,7 @@ import About from './components/views/About';
 import Blog from './components/views/Blog';
 import Podcasts from './components/views/Podcasts';
 import LiveStream from './components/views/LiveStream';
+
 
 
 function App() {
