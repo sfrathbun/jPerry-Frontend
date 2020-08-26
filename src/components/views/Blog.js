@@ -1,16 +1,48 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+// import firebase from "firebase";
+import { db } from "../firebase";
 
 
-const Blog = () => {
-
+class Blog extends Component
+{
+  
+  constructor ()
+  {
+    super();
+    this.state = {
+      Blog: []
+    };
+  }
+  
+  componentDidMount ()
+  {
+    // let db = firebase.database();
+    db.ref( "Blog/post/title" ).on( "value", snapshot =>
+    {
+      let posts = [];
+      snapshot.forEach( snap =>
+        {
+          posts.push( snap.val() );
+        } );
+        this.setState( { Blog: posts } );
+      } );
+    }
+    
+  render ()
+  {
     return (
-      <div className="Blog">
-        This is the blog page
-      </div>
-    )
+      this.state.Blog.map( Blog =>
+      {
+        return (
+          <>
+            <h1>Blog Posts</h1>
+            <div key={ Blog.title } >
+              { Blog.title }
+            </div>
+          </>
+        );
+      }
+    ))
+  }
 };
-Blog.propTypes = {
-}
-
 export default Blog;
