@@ -9,7 +9,7 @@ import {
 } from './counterSlice';
 
 
-//exaple of how to do redux style react
+//example of how to do redux style react
 
 export function Counter() {
   const count = useSelector(selectCount);
