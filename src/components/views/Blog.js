@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+import BlogPosts from '../BlogPosts/ShowBlogPosts/BlogPosts';
 
 
-const Blog = () => {
-
-    return (
-      <div className="Blog">
-        This is the blog page
-      </div>
-    )
+class Blog extends Component
+{
+  render ()
+  {
+    return(
+    <>
+      <BlogPosts />
+    </>
+    );
+  }
 };
-Blog.propTypes = {
-}
-
 export default Blog;
