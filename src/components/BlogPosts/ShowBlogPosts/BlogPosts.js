@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import firebase from 'firebase'
 import { db } from '/Users/jhunt/Desktop/jPerry-Frontend/src/components/firebase'
-import '../BlogPosts/BlogPosts.css'
+import '../ShowBlogPosts/BlogPosts.css'
 
 class BlogPosts extends Component {
   constructor() {
@@ -26,8 +26,9 @@ class BlogPosts extends Component {
     return this.state.Blog.map((Blog) => {
       return (
         <div className="div">
-          <h1>Blog Posts</h1>
-          <div key={Blog}>{Blog}</div>
+          <div key={ Blog }>
+            { Blog }
+          </div>
         </div>
       )
     })

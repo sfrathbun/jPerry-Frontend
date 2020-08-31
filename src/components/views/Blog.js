@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import BlogPosts from '../BlogPosts/ShowBlogPosts/BlogPosts/BlogPosts';
+import BlogPosts from '../BlogPosts/ShowBlogPosts/BlogPosts';
 
 
 class Blog extends Component
