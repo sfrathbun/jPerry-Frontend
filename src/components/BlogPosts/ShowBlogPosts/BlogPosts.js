@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import firebase from 'firebase'
-import { db } from '/Users/jhunt/Desktop/jPerry-Frontend/src/components/firebase'
+import { db } from '../../../components/firebase'
 import '../ShowBlogPosts/BlogPosts.css'
 
 class BlogPosts extends Component {
