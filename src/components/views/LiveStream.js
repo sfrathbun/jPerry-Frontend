@@ -10,7 +10,7 @@ const LiveStream = () => {
         <ReactPlayer
           className="react-player"
           controls={true}
-          url="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Frathbun.sean%2Fvideos%2F10157621674933434%2F&width=1280"
+          url="https://embed.restream.io/player/index.html?token=e966c922fc95e56232973ec5073fe4e7"
           width="100%"
           height="100%"
           >
