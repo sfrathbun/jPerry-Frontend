@@ -13,7 +13,7 @@ const Navigation = () => {
                   <Nav className="ml-auto">
                       <Link to="/">Home</Link>
                       <Link to="/podcasts">Podcasts</Link>
-                      <Link to="/watchLive">LiveStream</Link>
+                      <Link to="/watchLive">Facebook Live</Link>
                       <Link to="/blog">Blog</Link>
                       <Link to="/about">About</Link>
                   </Nav>
