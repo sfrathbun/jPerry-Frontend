@@ -14,10 +14,11 @@ class BlogPosts extends Component {
   componentDidMount() {
     // let db = firebase.database();
     db.ref('Blog/post').on('value', (snapshot) => {
-      let posts = []
+      let posts = [];
+
       snapshot.forEach((snap) => {
-        posts.push(snap.val())
-      })
+        posts.push(snap.toJSON())
+      });
       this.setState({ Blog: posts })
     })
   }
@@ -26,8 +27,8 @@ class BlogPosts extends Component {
     return this.state.Blog.map((Blog) => {
       return (
         <div className="div">
-          <div key={ Blog }>
-            { Blog }
+          <div key={ Blog.title }>
+            { Blog.content }
           </div>
         </div>
       )
