@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import firebase from 'firebase'
 import { db } from '../../../components/firebase'
 import '../ShowBlogPosts/BlogPosts.css'
+import { Container, Row, Col, Card } from "react-bootstrap";
+
 
 class BlogPosts extends Component {
   constructor() {
@@ -26,11 +27,16 @@ class BlogPosts extends Component {
   render() {
     return this.state.Blog.map((Blog) => {
       return (
-        <div className="div">
-          <div key={ Blog.title }>
-            { Blog.content }
-          </div>
-        </div>
+        <Container fluid="md" id="allBlogs">
+          <Card key={ Blog.title }>
+            <Card.Title md={3}>
+              { Blog.title }
+            </Card.Title>
+            <Card.Text>
+              {Blog.content}
+            </Card.Text>
+          </Card>
+        </Container>
       )
     })
   }
