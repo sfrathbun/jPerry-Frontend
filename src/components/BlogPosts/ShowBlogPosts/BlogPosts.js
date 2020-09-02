@@ -28,8 +28,8 @@ class BlogPosts extends Component {
     return this.state.Blog.map((Blog) => {
       return (
         <Container fluid="md" id="allBlogs">
-          <Card key={ Blog.title }>
-            <Card.Title md={3}>
+          <Card md={ 3 } key={ Blog.title }>
+            <Card.Title>
               { Blog.title }
             </Card.Title>
             <Card.Text>

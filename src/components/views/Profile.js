@@ -1,17 +1,17 @@
-// import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
-// import { auth, db } from "../services/firebase";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { auth, db } from "../services/firebase";
 
-// const Profile = () =>
-// {
+const Profile = () =>
+{
 
-//     return (
-//         <div className="Profile">
-//             This is the Profile page
-//         </div>
-//     );
-// };
-// Profile.propTypes = {
-// };
+    return (
+        <div className="Profile">
+            This is the Profile page
+        </div>
+    );
+};
+Profile.propTypes = {
+};
 
-// export default Profile;
+export default Profile;
