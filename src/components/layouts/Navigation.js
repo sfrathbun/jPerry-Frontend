@@ -9,15 +9,15 @@ const Navigation = () => {
   return (
       <div className="Navigation">
         <Fragment>
-              <Navbar.Collapse id="basic-navbar-nav">
+              <Navbar bg="primary" variant="" id="basic-navbar-nav">
                   <Nav className="ml-auto">
-                      <Link to="/">Home</Link>
-                      <Link to="/podcasts">Podcasts</Link>
-                      <Link to="/watchLive">Facebook Live</Link>
-                      <Link to="/blog">Blog</Link>
-                      <Link to="/about">About</Link>
+                    <Link to="/"> Home </Link>
+                    <Link to="/podcasts"> Podcasts </Link>
+                    <Link to="/watchLive"> Facebook Live </Link>
+                    <Link to="/blog"> Blog </Link>
+                    <Link to="/about"> About </Link>
                   </Nav>
-              </Navbar.Collapse>
+              </Navbar>
         </Fragment>
       </div>
     )
