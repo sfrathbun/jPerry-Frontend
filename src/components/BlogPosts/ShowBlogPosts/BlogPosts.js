@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import firebase from 'firebase'
 import { db } from '../../../components/firebase'
 import '../ShowBlogPosts/BlogPosts.css'
 
@@ -12,7 +11,6 @@ class BlogPosts extends Component {
   }
 
   componentDidMount() {
-    // let db = firebase.database();
     db.ref('Blog/post').on('value', (snapshot) => {
       let posts = [];
 
@@ -27,6 +25,7 @@ class BlogPosts extends Component {
     return this.state.Blog.map((Blog) => {
       return (
         <div className="div">
+          {Blog.title}
           <div key={ Blog.title }>
             { Blog.content }
           </div>

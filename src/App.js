@@ -10,7 +10,7 @@ import About from './components/views/About';
 import Blog from './components/views/Blog';
 import Podcasts from './components/views/Podcasts';
 import LiveStream from './components/views/LiveStream';
-
+import CreateBlogForm from './components/BlogPosts/create/CreateBlogForm'
 
 
 function App() {
@@ -20,9 +20,10 @@ function App() {
         <Navigation />
           <Route exact path='/' component={Home} />
           <Route exact path='/about' component={About} />
-          <Route exact path='/podcasts' component={Podcasts} />
+          {/* <Route exact path='/podcasts' component={Podcasts} /> */}
           <Route exact path='/watchLive' component={LiveStream} />
           <Route exact path='/blog' component={Blog} />
+        <Route exact path='/test' component={CreateBlogForm} />
       </Fragment>
     </Router>
   );
