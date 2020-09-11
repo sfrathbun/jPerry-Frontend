@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { db } from '../../../components/firebase'
+import { db, storage } from '../../../components/firebase'
 import '../ShowBlogPosts/BlogPosts.css'
 import { Container, Row, Col, Card } from "react-bootstrap";
-
+import '../../ImageUpload/ImageUpload';
 
 class BlogPosts extends Component {
   constructor() {

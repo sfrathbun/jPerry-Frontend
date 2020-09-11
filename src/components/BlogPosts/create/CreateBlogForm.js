@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { db } from '../../../components/firebase'
 import '../ShowBlogPosts/BlogPosts.css'
-
+import '../../ImageUpload/ImageUpload';
+import ImageUpload from '../../ImageUpload/ImageUpload';
 class CreateBlogForm extends Component {
     constructor(props) {
         super(props)
@@ -61,6 +62,7 @@ class CreateBlogForm extends Component {
 
             </label>
             <input type="submit" value="Submit" />
+            <ImageUpload />
         </form>
     }
 }
