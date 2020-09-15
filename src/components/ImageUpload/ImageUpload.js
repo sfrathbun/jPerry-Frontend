@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { storage } from '../firebase';
+import { storage } from '../../app/firebase';
 import { upload } from '../ImageUpload/ImageUpload.css'
 
 class ImageUpload extends PureComponent {

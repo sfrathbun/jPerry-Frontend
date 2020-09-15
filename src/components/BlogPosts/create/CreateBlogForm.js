@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { db } from '../../../components/firebase'
+import { db } from '../../../app/firebase'
 import '../ShowBlogPosts/BlogPosts.css'
 import '../../ImageUpload/ImageUpload';
 import ImageUpload from '../../ImageUpload/ImageUpload';
