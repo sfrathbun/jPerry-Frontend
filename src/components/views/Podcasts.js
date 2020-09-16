@@ -1,5 +1,9 @@
+import React, {Component} from 'react';
 import ReactAudioPlayer from 'react-audio-player'
 
+const Podcasts = () => {
+
+  return (
       <div>
       <div className="Podcasts" class="max-w-sm rounded overflow-hidden shadow-lg">
         <div class="px-6 py-4">
