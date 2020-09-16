@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {auth} from './app/firebase';
-import {setUser}from './features/auth/authSlice';
+import { auth } from './app/firebase';
+import { setUser } from './features/auth/authSlice';
 // import logo from './logo.svg';
 import './App.css';
 import './tailwind.output.css';
@@ -17,14 +17,13 @@ import CreateBlogForm from './components/BlogPosts/create/CreateBlogForm'
 
 
 class App extends Component {
-  dispatch = useDispatch();
-  componentDidMount(){
+  componentDidMount() {
     //when we loggin and poo tell redux to change that user
-    auth.auth().onAuthStateChanged(user=>{
-      this.dispatch(setUser(user));
+    auth().onAuthStateChanged(user => {
+      useDispatch()(setUser(user));
     });
   }
-  
+
   render() {
     return (
       <Router>
