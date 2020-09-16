@@ -1,10 +1,5 @@
 import ReactAudioPlayer from 'react-audio-player'
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 
-const Podcasts = () => {
-
-    return (
       <div>
       <div className="Podcasts" class="max-w-sm rounded overflow-hidden shadow-lg">
         <div class="px-6 py-4">
@@ -64,7 +59,7 @@ const Podcasts = () => {
         </div>
       </div>
       </div>
-      
+
     )
   };
 Podcasts.propTypes = {

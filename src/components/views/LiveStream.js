@@ -10,7 +10,7 @@ const LiveStream = () => {
         <ReactPlayer
           className="react-player"
           controls={true}
-          url="https://www.youtube.com/watch?v=JxKjgZywKKo"
+          url="https://embed.restream.io/player/index.html?token=e966c922fc95e56232973ec5073fe4e7"
           width="100%"
           height="100%"
           >

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import firebase from 'firebase'
-import { db } from '../../../components/firebase'
+import { db, storage } from '../../../components/firebase'
 import '../ShowBlogPosts/BlogPosts.css'
+import { Container, Row, Col, Card } from "react-bootstrap";
+import '../../ImageUpload/ImageUpload';
 
 class BlogPosts extends Component {
   constructor() {
@@ -12,12 +13,12 @@ class BlogPosts extends Component {
   }
 
   componentDidMount() {
-    // let db = firebase.database();
     db.ref('Blog/post').on('value', (snapshot) => {
-      let posts = []
+      let posts = [];
+
       snapshot.forEach((snap) => {
-        posts.push(snap.val())
-      })
+        posts.push(snap.toJSON())
+      });
       this.setState({ Blog: posts })
     })
   }
@@ -25,11 +26,16 @@ class BlogPosts extends Component {
   render() {
     return this.state.Blog.map((Blog) => {
       return (
-        <div className="div">
-          <div key={ Blog }>
-            { Blog }
-          </div>
-        </div>
+        <Container fluid="md" id="allBlogs">
+          <Card md={ 3 } key={ Blog.title }>
+            <Card.Title>
+              { Blog.title }
+            </Card.Title>
+            <Card.Text>
+              {Blog.content}
+            </Card.Text>
+          </Card>
+        </Container>
       )
     })
   }
